@@ -26,7 +26,7 @@ public class Snake_Xenxia extends JFrame implements KeyListener {
     File file = new File("High.txt");
 
     public Snake_Xenxia() {
-        timer = new javax.swing.Timer(100, new TimerListener());
+        timer = new javax.swing.Timer(60, new TimerListener());
         timer.start();
         addKeyListener(this);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
