@@ -178,15 +178,14 @@ public class Snake_Xenxia extends JFrame implements KeyListener {
                 pos = (Node) it.next();
                 if (pos.x < 10 || pos.y < 32 || pos.x > 975 || pos.y > 469
                         || (!pos.b && pos.x == i && pos.y == k)) {
-                    System.out.print("Your Score:\t");
-                    num.toWords(n - 1);
+                    System.out.print("Your Score:\t" + (n - 1));
                     try {
                         Scanner fin = new Scanner(new File("High.txt"));
                         int high = fin.nextInt();
                         fin.close();
                         if (high > (n - 1)) {
-                            System.out.print("High Score:\t");
-                            num.toWords(high);
+                            System.out.println("High Score:\t" + high);
+                            // num.toWords(high);
                         } else if (high < (n - 1)) {
                             System.out.print("Congratulations!!! You have made Highest Score");
                             PrintWriter fout = new PrintWriter(new File("High.txt"));
